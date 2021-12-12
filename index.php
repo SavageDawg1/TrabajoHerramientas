@@ -17,41 +17,13 @@
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="Estilo.css">
+	<link rel="stylesheet" href="css/Estilo.css">
 	<title>Document</title>
 </head>
-<body>
+<body  class="bg-light">
 	<!--Navbar-->
-	<header>
-		<nav class="navbar navbar-expand-lg">
-			<div class="container">
-				<a class="navbar-brand text-white" href="#"><i class="fa fa-graduation-cap fa-lg mr-2"></i>Nombre</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nvbCollapse" aria-controls="nvbCollapse">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="nvbCollapse">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item pl-1">
-							<a class="nav-link" href="#"><i class="fa fa-home fa-fw mr-1"></i>Inicio</a>
-						</li>
-						<li class="nav-item active pl-1">
-							<a class="nav-link" href="#"><i class="fa fa-th-list fa-fw mr-1"></i>Paquetes</a>
-						</li>
-						<li class="nav-item pl-1">
-							<a class="nav-link" href="#"><i class="fa fa-info-circle fa-fw mr-1"></i>Nosotros</a>
-						</li>
-						<li class="nav-item pl-1">
-							<a class="nav-link" href="#"><i class="fa fa-phone fa-fw fa-rotate-180 mr-1"></i>Contacto</a>
-						</li>
-						<li class="nav-item pl-1">
-							<a class="nav-link" href="#"><i class="fa fa-sign-in fa-fw mr-1"></i>Iniciar Sesion</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		</header>
-	  <!--Navbar-->
+	<?php include_once "include/header.php"; ?>
+	<!--Navbar-->
 	  
 	  <!--Slider-->
 	  <div class="container">
@@ -129,19 +101,7 @@
 	</div>
 
 	<!--Footer-->
-	<div class="footer-basic">
-        <footer>
-            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Home</a></li>
-                <li class="list-inline-item"><a href="#">Services</a></li>
-                <li class="list-inline-item"><a href="#">About</a></li>
-                <li class="list-inline-item"><a href="#">Terms</a></li>
-                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-            </ul>
-            <p class="copyright">Company Name © 2018</p>
-        </footer>
-    </div>
+	<?php include_once "include/footer.php"; ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
   	<!--Footer-->
