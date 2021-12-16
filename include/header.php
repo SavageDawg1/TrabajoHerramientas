@@ -11,7 +11,7 @@
               <a class="nav-link" href="index.php"><i class="fa fa-home fa-fw mr-1"></i>Inicio</a>
             </li>
             <li class="nav-item pl-1">
-              <a class="nav-link" href="#"><i class="fa fa-th-list fa-fw mr-1"></i>Paquetes</a>
+              <a class="nav-link" href="CindoTurismo.php"><i class="fa fa-th-list fa-fw mr-1"></i>Lugares</a>
             </li>
             <li class="nav-item pl-1">
               <a class="nav-link" href="quienes_somos.php"><i class="fa fa-info-circle fa-fw mr-1"></i>Nosotros</a>
