@@ -30,7 +30,7 @@
 	<section class="ftco-section mb-5">
 		<div class="container ">
 			<div class="row justify-content-center">
-				<div class="col-md-7 col-lg-5">
+				<div class="col-md-7 col-lg-6">
 					<div class="wrap border">
 						<div class="img" style="background-image: url(Fotos/fondo3.jpg);"></div>
 						<div class="login-wrap p-4 p-md-5">
@@ -40,65 +40,65 @@
 			      		</div>
 			      	</div>
 							<form action="#" class="signin-form">
-			      		<div class="form-group mt-3">
-			      			<input type="text" class="form-control" required autofocus>
+			      		<div class="form-group mt-3 ">
+			      			<input type="text" class="form-control" name="nombre_usuario" required autofocus>
 			      			<label class="form-control-placeholder" for="username">Nombre De Usuario</label>
 			      		</div>
 		            <div class="form-group mt-5">
-		              <input id="password-field" type="password" class="form-control" required>
+		              <input id="password-field" type="password" class="form-control" name="contraseña" required>
 		              <label class="form-control-placeholder" for="password">Contraseña</label>
 		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 		            </div>
-					<div class="form-group mt-5">
-		              <input id="password-field" type="text" class="form-control" required>
-		              <label class="form-control-placeholder" for="password">Correo</label>
-		            </div>
-					<div class="form-group mt-5">
-		              <input id="password-field" type="text" class="form-control" required>
-		              <label class="form-control-placeholder" for="password">Nombre</label>
-		            </div>
-					<div class="form-group mt-5">
-		              <input id="password-field" type="text" class="form-control" required>
-		              <label class="form-control-placeholder" for="password">Apellido Paterno</label>
-		            </div>
-					<div class="form-group mt-5">
-		              <input id="password-field" type="text" class="form-control" required>
-		              <label class="form-control-placeholder" for="password">Apellido Materno</label>
-		            </div>
-					<div class="form-group mt-5">
-		              <input id="password-field" type="text" class="form-control" required>
-		              <label class="form-control-placeholder" for="password">Edad</label>
-		            </div>
-					<div class="form-group mt-5">
-		              <input id="password-field" type="text" class="form-control" required>
-		              <label class="form-control-placeholder" for="password">Rut</label>
-		            </div>
-					<div class="form-group mt-5">
-						<input type="date" class="form-control" id="fecha"  name="fecha_nacimiento" required >
-						<label for="floatingPassword">Fecha de Nacimiento</label>
-                	</div>
-					<div class="form-group mt-5">
-		              <input id="password-field" type="text" class="form-control" required>
-		              <label class="form-control-placeholder" for="password">Ciudad</label>
-		            </div>
-					<div class="form-group mt-5">	
-		              <input id="password-field" type="text" class="form-control" required>
-		              <label class="form-control-placeholder" for="password">Calle</label>
-		            </div>
-					<div class="form-group mt-5">
-		              <input id="password-field" type="text" class="form-control" required>
-		              <label class="form-control-placeholder" for="password">Numero</label>
-		            </div>
-					<div class="form-group mt-5">
-						<label for="hombre" class="radio-inline"><input type="radio" name="genero" value="Hombre">Hombre</label>
-						<label for="mujer" class="radio-inline"><input type="radio" name="genero" value="Mujer">Mujer</label>
-						<label for="otros" class="radio-inline"><input type="radio" name="genero" value="Otros">Otros</label>
-					</div>
+								<div class="form-group mt-5">
+					        <input type="email" class="form-control" name="correo" required>
+					        <label class="form-control-placeholder">Correo</label>
+					      </div>
+								<div class="form-group mt-5">
+					        <input type="text" class="form-control" name="nombre" required>
+					        <label class="form-control-placeholder">Nombre</label>
+					      </div>
+								<div class="form-group mt-5">
+					     		<input type="text" name="apellido_paterno" class="form-control" required>
+					        <label class="form-control-placeholder">Apellido Paterno</label>
+					      </div>
+								<div class="form-group mt-5">
+					        <input type="text" name="apellido_materno" class="form-control" required>
+					        <label class="form-control-placeholder" for="password">Apellido Materno</label>
+					      </div>
+								<div class="form-group mt-5">
+					        <input type="number" name="edad" class="form-control" required>
+					        <label class="form-control-placeholder" >Edad</label>
+					      </div>
+								<div class="form-group mt-5">
+					        <input type="text" name="rut" class="form-control" required>
+					        <label class="form-control-placeholder">Rut</label>
+					      </div>
+								<div class="form-group mt-5">
+									<label for="floatingPassword">Fecha de Nacimiento</label>
+									<input type="date" name="fecha_nacimiento" class="form-control" id="fecha"  name="fecha_nacimiento" required >
+			          </div>
+								<div class="form-group mt-5">
+					      	<input type="text" name="ciudad" class="form-control" required>
+					        <label class="form-control-placeholder">Ciudad</label>
+					      </div>
+								<div class="form-group mt-5">	
+					        <input type="text" name="calle" class="form-control" required>
+					        <label class="form-control-placeholder">Calle</label>
+					      </div>
+								<div class="form-group mt-5">
+					        <input  type="text" name="numero" class="form-control" required>
+					        <label class="form-control-placeholder">Numero</label>
+					      </div>
+								<div class="form-group mt-5">
+									<label for="hombre" class="radio-inline"><input type="radio" name="genero" value="Hombre">Hombre</label>
+									<label for="mujer" class="radio-inline"><input type="radio" name="genero" value="Mujer">Mujer</label>
+									<label for="otros" class="radio-inline"><input type="radio" name="genero" value="Otros">Otros</label>
+								</div>
 		            <div class="form-group">
 		            	<button type="submit" class="form-control btna rounded submit px-3">Registrarse</button>
 		            </div>
 		          </form>
-		          <p class="text-center">¿Ya tienes cuenta? <a data-toggle="tab" href="#signup">Iniciar Sesion</a></p>
+		          <p class="text-center">¿Ya tienes cuenta? <a  href="login.php">Iniciar Sesion</a></p>
 		        </div>
 		      </div>
 				</div>
