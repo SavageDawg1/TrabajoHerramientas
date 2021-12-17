@@ -1,3 +1,10 @@
+<?php
+	require 'consultas/conexion.php';
+	include_once "consultas/ingresar.php";
+?>
+
+
+
 <!doctype html>
 <html lang="en">
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -34,12 +41,23 @@
 					<div class="wrap border">
 						<div class="img" style="background-image: url(Fotos/fondo3.jpg);"></div>
 						<div class="login-wrap p-4 p-md-5">
+							<?php if(!empty($message1)): ?>
+					      <p> <?= $message1 ?></p>
+					    <?php endif; ?>
+					    <?php if(!empty($message2)): ?>
+					      <p> <?= $message2 ?></p>
+					    <?php endif; ?>
+					    <?php if(!empty($message3)): ?>
+					      <p> <?= $message3 ?></p>
+					    <?php endif; ?>
 			      	<div class="d-flex">
 			      		<div class="w-100">
 			      			<h3 class="mb-4">Registro</h3>
 			      		</div>
 			      	</div>
-							<form action="#" class="signin-form">
+
+			      	<!-- //////////FORMULARIO PARA INSERTAR DATOS//////////// -->
+							<form action="registro.php" method="POST" class="signin-form">
 			      		<div class="form-group mt-3 ">
 			      			<input type="text" class="form-control" name="nombre_usuario" required autofocus>
 			      			<label class="form-control-placeholder" for="username">Nombre De Usuario</label>
@@ -90,12 +108,12 @@
 					        <label class="form-control-placeholder">Numero</label>
 					      </div>
 								<div class="form-group mt-5">
-									<label for="hombre" class="radio-inline"><input type="radio" name="genero" value="Hombre">Hombre</label>
-									<label for="mujer" class="radio-inline"><input type="radio" name="genero" value="Mujer">Mujer</label>
-									<label for="otros" class="radio-inline"><input type="radio" name="genero" value="Otros">Otros</label>
+									<label for="hombre" class="radio-inline"><input type="radio" name="sexo" value="Hombre">Hombre</label>
+									<label for="mujer" class="radio-inline"><input type="radio" name="sexo" value="Mujer">Mujer</label>
+									<label for="otros" class="radio-inline"><input type="radio" name="sexo" value="Otros">Otros</label>
 								</div>
 		            <div class="form-group">
-		            	<button type="submit" class="form-control btna rounded submit px-3">Registrarse</button>
+		            	<button name="insertar" type="submit" class="form-control btna rounded submit px-3">Registrarse</button>
 		            </div>
 		          </form>
 		          <p class="text-center">¿Ya tienes cuenta? <a  href="login.php">Iniciar Sesion</a></p>

@@ -1,9 +1,8 @@
 <?php
 	session_start();
-
   require 'consultas/conexion.php';
 	if (isset($_SESSION['user_id'])) {
-	    header('Location: usuario.php');
+	    header('Location: index.php');
 	    $$GLOBALS['user_id'] = something;
 	}
   if (!empty($_POST['correo']) && !empty($_POST['contraseña'])) {
