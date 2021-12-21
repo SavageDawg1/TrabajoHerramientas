@@ -8,31 +8,18 @@
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="css/Estilo.css">
-
-	<!--script para los dropdown-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-	<title>Document</title>
+	<?php include_once "include/head.php"; ?>
+	<title>Inicio</title>
 </head>
-<body  class="bg-light">
+
+<body >
 	<!--Navbar-->
 	<?php include_once "include/header.php"; ?>
 	<!--Navbar-->
 	  
 	  <!--Slider-->
 	  <div class="container">
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<div id="myCarousel" class="carousel slide rounded-start" data-ride="carousel">
 		  <!-- Indicators -->
 		  <ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -70,20 +57,20 @@
 	  <div class="container mx-auto mt-4">
 		<div class="row">
 		  <div class="col-md-4">
-			<div class="card" style="width: 35rem;">
-		<img src="Fotos/bahia.jpg" class="card-img-top" alt="Bahia Inglesa">
-		<div class="card-body">
-		  <h5 class="card-title">Bahia Inglesa</h5>
-		  <p class="card-text">Este tour a esta hermosa playa incluye estadia con visitas a distintos atractivos turísticos durante 2 días.</p>
-			 <a href="#" class="btn mr-2"><i class="fas fa-link"></i> $190.000</a>
-		  <a href="#" class="btn "><i class="fab fa-github"></i> Mas informacion</a>
-		</div>
-		</div>
-		  </div>    
-			 <div class="col-md-4">
-	  <div class="card" style="width: 35rem;">
-		<img src="Fotos/caldera.jpg" class="card-img-top" alt="Museo">
-		<div class="card-body">
+			<div class="card text-dark" style="width: 35rem;">
+				<img src="Fotos/bahia.jpg" class="card-img-top" alt="Bahia Inglesa">
+				<div class="card-body ">
+				  	<h5 class="card-title">Bahia Inglesa</h5>
+				  	<p class="card-text">Este tour a esta hermosa playa incluye estadia con visitas a distintos atractivos turísticos durante 2 días.</p>
+					<a href="#" class="btn mr-2"><i class="fas fa-link"></i> $190.000</a>
+				  	<a href="#" class="btn "><i class="fab fa-github"></i> Mas informacion</a>
+				</div>
+			</div>
+		</div>    
+		<div class="col-md-4">
+	  	<div class="card text-dark" style="width: 35rem;">
+			<img src="Fotos/caldera.jpg" class="card-img-top" alt="Museo">
+			<div class="card-body">
 		  <h5 class="card-title">Museo de Piedras</h5>
 		  <p class="card-text">Uno de los lugares de interés populares es el Museo de Piedras, en el cual se pueden apreciar estructuras rocosas con forma de variados animales.</p>
 		  <a href="#" class="btn  mr-2"><i class="fas fa-link"></i> $190.000</a>
@@ -92,7 +79,7 @@
 		</div>
 		  </div>    
 				<div class="col-md-4">
-	  <div class="card" style="width: 35rem;">
+	  <div class="card text-dark" style="width: 35rem;">
 		<img src="Fotos/laguna.jpg" class="card-img-top" alt="...">
 		<div class="card-body">
 		  <h5 class="card-title">Laguna Santa Rosa</h5>
