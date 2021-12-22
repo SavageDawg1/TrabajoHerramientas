@@ -646,4 +646,20 @@
   display: block !important;
 }
 
+@font-face{
+    font-family: Turismo;
+    src: url(../fuente/PatagoniaB.ttf);
+   
+}
 
+@font-face{
+    font-family: animal;
+    src: url(../fuente/ anim____.ttf);
+}
+
+.Turismo{
+  font-family: Turismo;
+}
+.animal{
+  font-family: animal;
+}
