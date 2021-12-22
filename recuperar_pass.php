@@ -18,108 +18,97 @@
     	}
   	}
 
-
     $conexion=mysqli_connect('localhost','root','admin123','registro');
-  	if (!empty($_POST['contraseña'])) {
+  	if (!empty($_POST['password'])) {
 
-  		$sql="UPDATE usuarios SET contrasena='$contraseña'  WHERE correo='$correo'";
-		$query=mysqli_query($conexion,$sql);
+  		$sql="UPDATE usuarios SET password='$password'  WHERE correo='$correo'";
+			$query=mysqli_query($conexion,$sql);
 
-		if($query){
-			$Rpass= 'no';
-			$message = 'Contraseña Actualizada';
-    	}else{
-    		$message = 'No FuNKA';
-    	}
-  		
+		
   	}
-
-
 
 ?>
 
 <!doctype html>
 <html class="no-js" lang="en">
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<head>
-	<title>Iniciar Sesión</title>
-    <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  
-
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
-  <link rel="stylesheet" href="css/Estilo.css">
+  <title>Iniciar Sesión</title>
+	<?php include_once "include/head.php"; ?>
 	<link rel="stylesheet" href="css/login.css">
-
-	
 </head>
 
 <body >
 	<?php include_once "include/header.php"; ?>
 
 
-	<?php if(!empty($message)): ?>
-      <p> <?= $message ?></p>
-    <?php endif; ?>
+    <section class="ftco-section mb-5">
+		<div class="container ">
+			<div class="row justify-content-center">
+				<div class="col-md-7 col-lg-5">
+					<div class="wrap border">
+						<div class="img" style="background-image: url(Fotos/fondo3.jpg);"></div>
+						<div class="login-wrap p-4 p-md-5">
+								<?php if(!empty($message)): ?>
+						    <p> <?= $message ?></p>
+						  <?php endif; ?>
+			      	<?php if($Rpass=='si'): ?>
 
-		
+			      	<div class="d-flex">
+			      		<div class="w-100">
+			      			<h3 class="mb-4">RECUPERAR CLAVE</h3>
+		    				
+			      		</div>
+			      	</div>
+					<form  method="POST" class="signin-form" action="consultas/update_pass.php" >
+			      		<div class="form-group mt-3" >
+			      			<label>Correo De Usuario</label>
+			      			<input type="email" class="form-control" name="correo" value="<?=$mail;?>"  required  readonly>
+			      			
+			      		</div>
+			            <div class="form-group mt-5">
+			              <input id="password-field" type="password" class="form-control" name="password" required autofocus>
+			              <label class="form-control-placeholder" for="password">Nueva Contraseña</label>
+			              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+			            </div>
 
-		<?php if($Rpass=='si'): ?>
-		<div id="form1" class="carousel slide container-xxl " data-bs-ride="carousel">
-			<div class="form-signin border border-dark container-xxl form bg-light ">
-					
-					<form action="consultas/update_pass.php" method="POST">	
-						<div>
-							<input type="email" class="form-control" name="correo" value="<?=$mail;?>" placeholder="name@example.com" readonly>
-						</div>			
-            			<div class=" form-floating mb-3">
-					      	<input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="contraseña" required autofocus>
-					      	<label for="floatingPassword" >Nueva Constraseña</label>
-					    </div>
-					     <div>
-					    	<a href="index.php" class="btn btn-danger">Regresar</a>
-					   	 	<button  class="w-auto btn btn btn-primary" type="submit" value="send">Actualizar</button>
-					    </div>
-					    
-					</form>
-			</div>
-		</div>	
-		<?php else: ?>
-			<div id="form1" class="carousel slide container-xxl " data-bs-ride="carousel">
-			<div class=" form-signin border border-dark container-xxl form bg-light ">
-				<form action="recuperar_pass.php" method="POST">
- 
-			    	<h1 class="h3 mb-3 fw-normal especial" >RECUPERAR CLAVE</h1>
-			    	<p class="h3 mb-3 fw-normal fs-6">Ingresa Tu Dirección Email Y Nombre</p>
-				    <div class="form-floating">
-				      	<input type="email" class="form-control" name="correo" placeholder="name@example.com" autofocus>
-				    	<label for="floatingInput">Dirección Email</label>
-				    </div>
-				    <div class="form-floating mb-3">
-				      	<input type="text" class="form-control" name="nombre_usuario" placeholder="Nombre">
-				      	<label for="floating">Nombre</label>
-				    </div> 
-				    <div>
-				    	<a href="index.php" class="btn btn-danger">Regresar</a>
-				   	 	<button  class="w-auto btn btn btn-primary" type="submit" value="send">Recuperar</button>
-				    </div>
-				</form>
+			            <div class="form-group">
+			            	<button type="submit" value="send" class="form-control btna rounded submit px-3">Aceptar</button>
+			            </div>
+		          	</form>
+					<?php else: ?>
+			      	<div class="d-flex">
+			      		<div class="w-100">
+			      			<h3 class="mb-4">RECUPERAR CLAVE</h3>
+		    				<p class="mb-3 ">Ingresa Tu Correo Y Nombre De Usuario</p>
+			      		</div>
+			      	</div>
+					<form  method="POST" class="signin-form">
+			      		<div class="form-group mt-3">
+			      			<input type="email" class="form-control" name="correo" required autofocus>
+			      			<label class="form-control-placeholder" >Correo De Usuario</label>
+			      		</div>
+			            <div class="form-group mt-3">
+			      			<input type="text" class="form-control" name="nombre_usuario" required autofocus>
+			      			<label class="form-control-placeholder" >Nombre De Usuario</label>
+			      		</div>
+
+			            <div class="form-group">
+			            	<button type="submit" value="send" class="form-control btna rounded submit px-3">Recuperar Contraseña</button>
+			            </div>
+		          	</form>
+		          	<?php endif; ?>
+		         	<p class="text-center">¿Recuerdas tu contraseña? <a  href="login.php">Iniciar Sesion</a></p>
+		        </div>
+		      </div>
+				</div>
 			</div>
 		</div>
-		<?php endif; ?>
-
-		
+	</section>	
 	<?php include_once "include/footer.php"; ?>
 </body>
-
+<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script> 
 </html>

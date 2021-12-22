@@ -2,35 +2,17 @@
 	require 'consultas/conexion.php';
 	include_once "consultas/ingresar.php";
 ?>
-
-
-
 <!doctype html>
 <html lang="en">
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <head>
-  	<title>Registro</title>
-    <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  
-
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
-  <link rel="stylesheet" href="css/Estilo.css">
+  	<title>Iniciar Sesión</title>
+	<?php include_once "include/head.php"; ?>
 	<link rel="stylesheet" href="css/login.css">
-
-
 	</head>
-	<body>
+	<body >
 
 	<?php include_once "include/header.php"; ?>
 
@@ -41,14 +23,8 @@
 					<div class="wrap border">
 						<div class="img" style="background-image: url(Fotos/fondo3.jpg);"></div>
 						<div class="login-wrap p-4 p-md-5">
-							<?php if(!empty($message1)): ?>
-					      <p> <?= $message1 ?></p>
-					    <?php endif; ?>
-					    <?php if(!empty($message2)): ?>
-					      <p> <?= $message2 ?></p>
-					    <?php endif; ?>
-					    <?php if(!empty($message3)): ?>
-					      <p> <?= $message3 ?></p>
+							<?php if(!empty($message)): ?>
+					      <p> <?= $message ?></p>
 					    <?php endif; ?>
 			      	<div class="d-flex">
 			      		<div class="w-100">
@@ -63,7 +39,7 @@
 			      			<label class="form-control-placeholder" for="username">Nombre De Usuario</label>
 			      		</div>
 		            <div class="form-group mt-5">
-		              <input id="password-field" type="password" class="form-control" name="contraseña" required>
+		              <input id="password-field" type="password" class="form-control" name="password" required>
 		              <label class="form-control-placeholder" for="password">Contraseña</label>
 		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 		            </div>
@@ -81,11 +57,11 @@
 					      </div>
 								<div class="form-group mt-5">
 					        <input type="text" name="apellido_materno" class="form-control" required>
-					        <label class="form-control-placeholder" for="password">Apellido Materno</label>
+					        <label class="form-control-placeholder">Apellido Materno</label>
 					      </div>
 								<div class="form-group mt-5">
-					        <input type="number" name="edad" class="form-control" required>
-					        <label class="form-control-placeholder" >Edad</label>
+									<label >Edad</label>
+					        <input type="number" name="edad" class="form-control" id="edad" readonly=" ">
 					      </div>
 								<div class="form-group mt-5">
 					        <input type="text" name="rut" class="form-control" required>
@@ -131,7 +107,7 @@
 	<!--Footer-->
 	</body>
  
-
+	<script src='Js/Funciones.js'></script>
  	<script src="js/jquery.min.js"></script>
   <script src="js/popper.js"></script>
   <script src="js/bootstrap.min.js"></script>

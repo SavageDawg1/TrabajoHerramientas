@@ -1,48 +1,33 @@
+<!--Verificar si esta logeado-->
+    <?php include_once "include/conectado.php"; ?> <!--Poner en todas las paginas menos en login y en el registro-->
+<!--Verificar si esta logeado-->
 <!doctype html>
 <html lang="en">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <link rel="stylesheet" href="css/Estilo.css">
-   <link rel="stylesheet" href="css/quienes_somos.css">
+  <?php include_once "include/head.php"; ?>
+  <link rel="stylesheet" href="css/quienes_somos.css">
   <title>Quienes Somos</title>
 </head>
 
-<body class="bg-light">
+<body>
   <!--Navbar-->
   <?php include_once "include/header.php"; ?>
   <!--Navbar-->
-  <?php include_once "include/header.php"; ?>
-
-
-
-
   <main>
 
-    <div class="container marketing">     
+    <div class="container marketing  mt-5">     
         
       <!-- START THE FEATURETTES -->
-        <div class="row featurette ">
-          <div class="col-md-8 bg-white rounded border">
-            <h2 class="featurette-heading mb-5">SOBRE NOSOTROS</h2>
-            <p class=" lead text-justify">Nuestra sueño nace en 2021 y desde su inicio se ha insertado en la memoria de todo viajero nacional que desee conocer la región de Atacama. A través de nuestras Redes Sociales (Facebook, Twitter, Instagram y Youtube) se ha generado una gran comunidad atenta a nuestras publicaciones, actividades y formatos que diariamente mostramos para mantener informados a nuestros seguidores, quienes interactúan, participan y reconocen nuestro trabajo.En nuestro sitio podrás encontrar noticias, entrevistas, vivenciales, reportajes e imperdibles sobre temáticas turísticas, entre mucha otra información turística que acerque a nuestros usuarios planificar sus viajes por Chile.</p>
+        <div class="row featurette mt-5">
+          <div class="col-md-8 bg-faded rounded border ">
+            <h2 class="featurette-heading mb-5 text-black">SOBRE NOSOTROS</h2>
+            <p class=" lead text-justify ">Nuestra sueño nace en 2021 y desde su inicio se ha insertado en la memoria de todo viajero nacional que desee conocer la región de Atacama. A través de nuestras Redes Sociales (Facebook, Twitter, Instagram y Youtube) se ha generado una gran comunidad atenta a nuestras publicaciones, actividades y formatos que diariamente mostramos para mantener informados a nuestros seguidores, quienes interactúan, participan y reconocen nuestro trabajo.En nuestro sitio podrás encontrar noticias, entrevistas, vivenciales, reportajes e imperdibles sobre temáticas turísticas, entre mucha otra información turística que acerque a nuestros usuarios planificar sus viajes por Chile.</p>
           </div>
           <div class="col-md-4"> 
-            <img src="Fotos/flamenco.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400" height="400" role="img">
+            <img src="Fotos/flamenco.jpg" class="rounded bd-placeholder-img  bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400" height="400" role="img">
           </div>
         </div>
         <hr class="featurette-divider">
@@ -70,12 +55,12 @@
         <!-- /.row -->
        
         <div class="row featurette ">
-          <div class="col-md-7 order-md-2 bg-white rounded border">
-            <h2 class="featurette-heading mb-5">Donde Puedes Encontrarnos</h2>
-            <p class="lead text-justify">Nuestra sucursal se encuentra en <strong>[Inserte Calle X]</strong></p>
+          <div class="col-md-7 order-md-2 bg-faded rounded border">
+            <h2 class="featurette-heading mb-5 text-black">Donde Puedes Encontrarnos</h2>
+            <p class="lead text-justify">Nuestra sucursal se encuentra en <strong>Universidad de Atacama</strong></p>
           </div>
           <div class="col-md-5 order-md-1">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d885.7919852692258!2d-70.32595850044716!3d-27.370470068304908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969805f7c70f09cb%3A0xac6698478c66c1eb!2sUnimarc!5e0!3m2!1ses!2scl!4v1633403969334!5m2!1ses!2scl" width="420" height="450"  allowfullscreen="" loading="lazy" class="border border-dark"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14174.416039665526!2d-70.3526764!3d-27.3568459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5d6a6c8301905dfb!2sUniversidad%20de%20Atacama!5e0!3m2!1ses!2scl!4v1639936475240!5m2!1ses!2scl" width="420" height="450"  allowfullscreen="" loading="lazy" class="border border-dark"></iframe>
           </div>
         </div>
 
