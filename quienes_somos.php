@@ -32,25 +32,26 @@
         </div>
         <hr class="featurette-divider">
          
-        <h1 class="h1 mb-5" style="text-align: center;">NUESTRO STAFF</h1>
-        <div class="row">
-          <div class="col-lg-3">
-            <svg class="bd-placeholder-img rounded-circle border border-2 border-dark" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-            <h2>Franz Oppliger</h2>
-          </div>
-          <div class="col-lg-3">
-            <svg class="bd-placeholder-img rounded-circle border border-2 border-dark" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-            <h2>Yerko Arbarza</h2>
-          </div>
-          <div class="col-lg-3">
-            <svg class="bd-placeholder-img rounded-circle border border-2 border-dark" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-            <h2>Gaspar Araya</h2>
-          </div>
-          <div class="col-lg-3">
-            <svg class="bd-placeholder-img rounded-circle border border-2 border-dark" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-            <h2>Ignacio Zenteno</h2>
-          </div>
-        </div>
+       <center><h1 class="h1 mb-5" style="text-align: center;">NUESTRO STAFF</h1>
+                          <div class="row">
+                            <div class="col-lg-3">
+                              <img src="Fotos/gatom.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="140" height="140" role="img" style="border-radius: 70px;">
+                              
+                              <h2>Franz Oppliger</h2>
+                            </div>
+                            <div class="col-lg-3">
+                              <img src="Fotos/yerko.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="140" height="140" role="img" style="border-radius: 70px;">
+                              <h2>Yerko Arbarza</h2>
+                            </div>
+                            <div class="col-lg-3">
+                              <img src="Fotos/gaspar.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="140" height="140" role="img" style="border-radius: 70px;">
+                              <h2>Gaspar Araya</h2>
+                            </div>
+                            <div class="col-lg-3">
+                              <img src="Fotos/ignacio.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="140" height="140" role="img" style="border-radius: 70px;">
+                              <h2>Ignacio Zenteno</h2>
+                            </div>
+                          </div></center>
         <hr class="featurette-divider">
         <!-- /.row -->
        

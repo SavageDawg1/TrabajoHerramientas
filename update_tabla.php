@@ -40,9 +40,9 @@
     <body >
 
     <?php include_once "include/header.php"; ?> 
-        <?php if(!empty($message)): ?>
-            <p> <?= $message ?></p>
-        <?php endif; ?>
+    <?php if(!empty($message)): ?>
+        <p> <?= $message ?></p>
+    <?php endif; ?>
 
 
 
@@ -54,100 +54,93 @@
                         <div class="img" style="background-image: url(Fotos/fondo3.jpg);"></div>
                         <div class="login-wrap p-4 p-md-5">
                             <?php if(!empty($message)): ?>
-                          <p> <?= $message ?></p>
-                        <?php endif; ?>
-                   
-
-                    <!-- //////////FORMULARIO PARA ACTUALIZAR DATOS//////////// -->
+                                <p> <?= $message ?></p>
+                            <?php endif; ?>
+                        <!-- //////////FORMULARIO PARA ACTUALIZAR DATOS//////////// -->
                             <form action="consultas/actualizar.php" method="POST" class="signin-form">
-                                 <div class="d-flex">
-                        <div class="w-100">
-                            <h1 class="h3 mb-1 fw-normal">Actualizar Datos Del Usuario N°<input name="id_personas" class="border border-light " style="width: 30px" readonly  value="<?=$row['id_personas'];?>" ></h1>
-                            <h5 class="fw-normal mb-4">Aquí puedes actualizar sus datos personales</h5>
-
-                        </div>
-                    </div>
-                        <div class="form-group mt-3 ">
-                            <input type="text" class="form-control" name="nombre_usuario" required value="<?=$row['nombre_usuario']; ?>" autofocus>
-                            <label class="form-control-placeholder" for="username">Nombre De Usuario</label>
-                        </div>
-                        <div class="form-group mt-5">
-                            <label >Correo</label>
-                            <input type="email" class="form-control" name="correo" required value="<?=$row['correo'];?>" readonly >
-                            
-                          </div>
+                                <div class="d-flex">
+                                    <div class="w-100">
+                                        <h1 class="h3 mb-1 fw-normal">Actualizar Datos Del Usuario N°<input name="id_personas" class="border border-light " style="width: 30px" readonly  value="<?=$row['id_personas'];?>" ></h1>
+                                        <h5 class="fw-normal mb-4">Aquí puedes actualizar sus datos personales</h5>
+                                    </div>
+                                </div>
                                 <div class="form-group mt-5">
-                            <input type="text" class="form-control" name="nombre" required value="<?=$row['nombre']; ?>">
+                                    <label >Correo</label>
+                                    <input type="email" class="form-control" name="correo" required value="<?=$row['correo'];?>" readonly >
+                                </div>
+                                <div class="form-group mt-3 ">
+                                    <input type="text" class="form-control" name="nombre_usuario" required value="<?=$row['nombre_usuario']; ?>" autofocus>
+                                    <label class="form-control-placeholder" for="username">Nombre De Usuario</label>
+                                </div>
+                        
+                                <div class="form-group mt-5">
+                                <input type="text" class="form-control" name="nombre" required value="<?=$row['nombre']; ?>">
                             <label class="form-control-placeholder">Nombre</label>
-                          </div>
+                            </div>
                                 <div class="form-group mt-5">
                                 <input type="text" name="apellido_paterno" class="form-control" value="<?=$row['apellido_paterno']; ?>" required>
                             <label class="form-control-placeholder">Apellido Paterno</label>
-                          </div>
+                            </div>
                                 <div class="form-group mt-5">
-                            <input type="text" name="apellido_materno" class="form-control" required value="<?=$row['apellido_materno']; ?>">
-                            <label class="form-control-placeholder">Apellido Materno</label>
-                          </div>
-                                <div class="form-group mt-5">
-                                    <label >Edad</label>
-                            <input type="number" name="edad" class="form-control" id="edad" value="<?=$row['edad']; ?>" readonly=" ">
-                          </div>
-                                <div class="form-group mt-5">
-                            <input type="text" name="rut" class="form-control" required value="<?=$row['rut']; ?>">
-                            <label class="form-control-placeholder">Rut</label>
-                          </div>
-                                <div class="form-group mt-5">
-                                    <label for="floatingPassword">Fecha de Nacimiento</label>
-                                    <input type="date" name="fecha_nacimiento" class="form-control" id="fecha"  name="fecha_nacimiento" value="<?=$row['fecha_nacimiento']; ?>" required >
-                      </div>
-                                <div class="form-group mt-5">
-                            <input type="text" name="ciudad" class="form-control" required value="<?=$row['ciudad']; ?>">
-                            <label class="form-control-placeholder">Ciudad</label>
-                          </div>
+                                <input type="text" name="apellido_materno" class="form-control" required value="<?=$row['apellido_materno']; ?>">
+                                <label class="form-control-placeholder">Apellido Materno</label>
+                            </div>
+                            <div class="form-group mt-5">
+                                <input type="text" name="rut" class="form-control" required value="<?=$row['rut']; ?>">
+                                <label class="form-control-placeholder">Rut</label>
+                            </div>
+                            <div class="form-group mt-5">
+                                <label for="floatingPassword">Fecha de Nacimiento</label>
+                                <input type="date" name="fecha_nacimiento" class="form-control" id="fecha"  name="fecha_nacimiento" value="<?=$row['fecha_nacimiento']; ?>" required >
+                            </div>
+                            <div class="form-group mt-5">
+                                <label >Edad</label>
+                                <input type="number" name="edad" class="form-control" id="edad" value="<?=$row['edad']; ?>" readonly=" ">
+                            </div>
+                            <div class="form-group mt-5">
+                                <input type="text" name="ciudad" class="form-control" required value="<?=$row['ciudad']; ?>">
+                                <label class="form-control-placeholder">Ciudad</label>
+                            </div>
                                 <div class="form-group mt-5">   
-                            <input type="text" name="calle" class="form-control" required value="<?=$row['calle']; ?>">
-                            <label class="form-control-placeholder">Calle</label>
-                          </div>
-                                <div class="form-group mt-5">
-                            <input  type="text" name="numero" class="form-control" required value="<?=$row['numero']; ?>">
-                            <label class="form-control-placeholder">Numero</label>
-                          </div>
+                                <input type="text" name="calle" class="form-control" required value="<?=$row['calle']; ?>">
+                                <label class="form-control-placeholder">Calle</label>
+                            </div>
+                            <div class="form-group mt-5">
+                                <input  type="text" name="numero" class="form-control" required value="<?=$row['numero']; ?>">
+                                <label class="form-control-placeholder">Numero</label>
+                            </div>
                             <label >Sexo</label>
-                                <div class="form-group mt-5">
-                                    <?php if ($row['sexo']=='Hombre'):?>
+                            <div class="form-group mt-5">
+                                <?php if ($row['sexo']=='Hombre'):?>
                                     <label for="hombre" class="radio-inline"><input type="radio" name="sexo" value="Hombre" checked>Hombre</label>
-                                    <?php else:?>
+                                <?php else:?>
                                     <label for="hombre" class="radio-inline"><input type="radio" name="sexo" value="Hombre">Hombre</label>
-                                    <?php endif;?>
+                                <?php endif;?>
 
-                                    <?php if ($row['sexo']=='Mujer'):?>
+                                <?php if ($row['sexo']=='Mujer'):?>
                                     <label for="mujer" class="radio-inline"><input type="radio" name="sexo" value="Mujer" checked>Mujer</label>
-                                    <?php else:?>
+                                <?php else:?>
                                     <label for="mujer" class="radio-inline"><input type="radio" name="sexo" value="Mujer">Mujer</label>
-                                    <?php endif;?>
+                                <?php endif;?>
 
-                                    <?php if ($row['sexo']=='Otros'):?>
+                                <?php if ($row['sexo']=='Otros'):?>
                                     <label for="otros" class="radio-inline"><input type="radio" name="sexo" value="Otros" checked>Otros</label>
-                                    <?php else:?>
+                                <?php else:?>
                                      <label for="otros" class="radio-inline"><input type="radio" name="sexo" value="Otros">Otros</label>
-                                    <?php endif;?>
-                                </div>
-                    <div class="form-group">
-                        <button name="actualizar" type="submit" class="form-control btna rounded submit px-3">Actualizar</button>
+                                <?php endif;?>
+                            </div>
+                            <div class="form-group">
+                                <button name="actualizar" type="submit" class="form-control btna rounded submit px-3">Actualizar</button>
+                            </div>
+                            </form>
+                        </div>
                     </div>
-                  </form>
-                </div>
-              </div>
                 </div>
             </div>
         </div>
     </section>
-        
-
     <?php include_once "include/footer.php"; ?>
     </body>
-
-
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
