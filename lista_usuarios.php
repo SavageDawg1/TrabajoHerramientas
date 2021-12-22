@@ -1,16 +1,8 @@
 <?php 
+    include_once "include/conectado.php";
     session_start();
     require 'consultas/conexion.php';
-    if (isset($_SESSION['user_id'])) {
-        $records = $conn->prepare('SELECT * FROM personas WHERE id = :id');
-        $records->bindParam(':id', $_SESSION['user_id']);
-        $records->execute();
-        $results = $records->fetch(PDO::FETCH_ASSOC);
-        $user = null;
-        if (count($results) > 0) {
-          $user = $results;
-        }
-    }
+
 
     if(isset($_POST{'consulta'})){
         $q = ($_POST['consulta']);
@@ -34,16 +26,11 @@
 <html lang="en">
     <head>
         <title> Lista de Usuarios</title>
-        <?php include_once "include/head.php"; ?>
-       
-
-        
+        <?php include_once "include/head.php"; ?>       
+              
     </head>
     <body>
         <?php include_once "include/header.php"; ?>
-         
-        
-
         <div class="container-xxl  bg-light">
             <section class="principal ">
             <h1 class="especial mb-4">LISTA DE USUARIOS</h1>
@@ -53,7 +40,7 @@
                 <input type="text" name="consulta" id="consulta" > 
                  <button type="submit" class=" w-auto btn btn btn-primary" >Buscar</button>
             </form>
-            <table class="table " >
+            <table class="table table-striped" >
                     <thead class="table-success table-striped" >
                         <tr>
                             <th>Rut</th>

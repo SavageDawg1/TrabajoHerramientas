@@ -1,9 +1,12 @@
 <?php
+	include_once "include/conectado.php";
 	session_start();
-  require 'consultas/conexion.php';
+
+  	require 'consultas/conexion.php';
 	if (isset($_SESSION['user_id'])) {
 	    $$GLOBALS['user_id'] = something;
 	}
+
   if (!empty($_POST['correo']) && !empty($_POST['password'])) {
    	$records = $conn->prepare('SELECT * FROM usuarios WHERE correo = :correo');
    	$records->bindParam(':correo', $_POST['correo']);
@@ -21,6 +24,7 @@
 ?>
 
 <!doctype html>
+
 <html lang="en">
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -99,6 +103,6 @@
   <script src="js/popper.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
-	<script src="js/bootstrap.bundle.min.js"></script>   
+	
 </html>
 

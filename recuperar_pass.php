@@ -1,4 +1,5 @@
 <?php
+	include_once "include/conectado.php";
 	session_start();
   	require 'consultas/conexion.php';
   	if (!empty($_POST['correo']) && !empty($_POST['nombre_usuario'])) {

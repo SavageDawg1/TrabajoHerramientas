@@ -1,4 +1,5 @@
 <?php
+	include_once "include/conectado.php";
 	require 'consultas/conexion.php';
 	include_once "consultas/ingresar.php";
 ?>

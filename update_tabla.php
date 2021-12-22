@@ -1,6 +1,8 @@
 <?php
+    include_once "include/conectado.php";
     session_start();
     require 'consultas/conexion.php';
+
 
     if (isset($_SESSION['user_id'])) {
         $records = $conn->prepare('SELECT * FROM personas WHERE id = :id');
