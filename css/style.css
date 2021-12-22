@@ -904,18 +904,20 @@ p {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  margin: 4rem;
+  margin: 3rem;
   border-radius: 55px;
 
 }
 
 
 #cardgroup1{
-  margin-left: 140px;
+  margin-right: 40px;
+  margin-left: 40px;
 }
 #cardgroup2{
   margin-bottom: 50px;
-  margin-left: 140px;
+  margin-right: 40px;
+  margin-left: 40px;
 }
 
 .card-body {
@@ -980,7 +982,7 @@ p {
 .card-img-top,
 .card-img-bottom {
   width: 100%;
-  border-radius: 50px 50px 50px 50px;
+  border-radius: 50px 50px 0px 0px;
 }
 
 @media (min-width: 576px) {

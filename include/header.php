@@ -22,7 +22,7 @@
                             <button class="btn-nav btn-secondary btn-sm dropdown-toggle rounded text-uppercase" type="button" id="dropdownMenuButtonSM" data-bs-toggle="dropdown" aria-expanded="false" style="margin-top: 7px; background: inherit; font-size: 14px"><i class="fa fa-sign-in fa-fw mr-1"></i><?= $user['nombre_usuario']; ?>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonSM" style="text-align: left;">
-                                <li><a class="dropdown-item textdrop" href="#" style="text-align: left; font-size: 12px;">Datos De Usuario</a></li>
+                                <li><a class="dropdown-item textdrop" href="lista_usuarios.php" style="text-align: left; font-size: 12px;">Listas De Usuarios</a></li>
                                 <li><hr class="dropdown-divider "></li>
                                 <li><a class="dropdown-item textdrop" href="consultas/logout.php" style="text-align: left; font-size: 12px;">Cerrar Sesión</a></li>
                             </ul>
