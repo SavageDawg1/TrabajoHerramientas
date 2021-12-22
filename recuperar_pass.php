@@ -21,17 +21,12 @@
     $conexion=mysqli_connect('localhost','root','admin123','registro');
   	if (!empty($_POST['password'])) {
 
-  		$sql="UPDATE usuarios SET contrasena='$password'  WHERE correo='$correo'";
-		$query=mysqli_query($conexion,$sql);
+  		$sql="UPDATE usuarios SET password='$password'  WHERE correo='$correo'";
+			$query=mysqli_query($conexion,$sql);
 
-		if($query){
-			$message = 'Contraseña Actualizada';
-			header('Location: login.php');
-    	}else{
-    		$message = 'No FuNKA';
-    	}
-    	header('Location: login.php');
+		
   	}
+
 ?>
 
 <!doctype html>
@@ -64,8 +59,8 @@
 		    				
 			      		</div>
 			      	</div>
-					<form  method="POST" class="signin-form">
-			      		<div class="form-group mt-3">
+					<form  method="POST" class="signin-form" action="consultas/update_pass.php" >
+			      		<div class="form-group mt-3" >
 			      			<label>Correo De Usuario</label>
 			      			<input type="email" class="form-control" name="correo" value="<?=$mail;?>"  required  readonly>
 			      			
